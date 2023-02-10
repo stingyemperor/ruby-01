@@ -64,12 +64,19 @@ def starts_with_consonant?(string)
   # YOUR CODE HERE
   vowel = 'AEIOUaeiou'
   result = true
-  if vowel.include? string[0]
-    result = false
-  end  
+  
   if string.empty?
-    result = false
+    return false
   end
+  
+  if !string[0].match?(/[[:alpha:]]/)
+    return false  
+  end
+  
+  if vowel.include? string[0]
+    return false
+  end  
+
   result
 end
 
