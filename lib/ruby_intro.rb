@@ -55,9 +55,7 @@ def hello(name)
   result
 end
 
-def letter?(lookAhead)
-  lookAhead.match?(/[[:alpha:]]/)
-end
+
 
 
 def starts_with_consonant?(string)
